@@ -1,7 +1,7 @@
 import os
 from checker import TransferChecker
 from pathlib import Path
-from config import CWD, READ_FROM_DIR, WRITE_TO_DIR
+from config import CWD, READ_FROM_DIR, WRITE_TO_DIR, START_BLOCK, END_BLOCK
 
 
 def write_txt(new_filename: Path | str, data_list: list | tuple) -> bool | None:
@@ -24,7 +24,7 @@ def main():
 
     for wallet in wallet_addresses:
         checker = TransferChecker(address=wallet)
-        res = checker.find_transfer()
+        res = checker.find_transfer(start_block=START_BLOCK, end_block=END_BLOCK)
         if res is not None:
             results.append(wallet)
 

@@ -8,6 +8,9 @@ SLEEP_RATELIMIT_DURATION_RANGE = [
 
 ARBISCAN_API_KEY = ""  # API key from arbiscan
 TARGET_TRANSFER_ADDRESS = ""  # 0x...
+START_BLOCK = 175000000  # change to your value
+END_BLOCK = 195500000  # change to your value. could be "latest"
+
 
 # Current directory
 CWD = Path(os.getcwd())
